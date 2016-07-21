@@ -1,0 +1,10 @@
+surface.CreateFont("text_test",{
+font = "Arial",
+ size = 40,
+ weight = 5000,
+ })
+hook.Add("PostDrawOpaqueRenderables","text_test",function()
+cam.Start3D2D(Vector(-1599.111250, -3324.874268, 329.283203),Angle(180,-90,270),0.70) #This position is suitable for gm_construct 
+draw.SimpleText("Sample Text","text_test",0,0,Color(250,250,0))
+cam.End3D2D()
+end)
